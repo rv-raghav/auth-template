@@ -6,7 +6,7 @@
 
 📦 **Repository:** [github.com/rv-raghav/auth-template](https://github.com/rv-raghav/auth-template)
 
-![Template Preview](https://via.placeholder.com/800x400/1e293b/3b82f6?text=Auth+Template+Preview)
+![Template Preview](https://chaicode-auth.vercel.app/final-work/landing_page.jpg)
 
 ---
 
@@ -265,7 +265,7 @@ When running `npm run serve`:
 - [x] Clean folder structure
 - [x] Documentation
 - [x] Live demo URL → [chaicode-auth.vercel.app](https://chaicode-auth.vercel.app)
-- [ ] Screenshots
+- [x] Screenshots
 
 ---
 
