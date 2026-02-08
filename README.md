@@ -2,6 +2,10 @@
 
 > A production-ready, reusable authentication UI template built with **HTML + Tailwind CSS** for the ChaiCode Registry.
 
+🔗 **Live Demo:** [chaicode-auth.vercel.app](https://chaicode-auth.vercel.app)
+
+📦 **Repository:** [github.com/rv-raghav/auth-template](https://github.com/rv-raghav/auth-template)
+
 ![Template Preview](https://via.placeholder.com/800x400/1e293b/3b82f6?text=Auth+Template+Preview)
 
 ---
@@ -27,7 +31,7 @@ Authentication is a core feature of every web application. This template provide
 
 ```bash
 # 1. Clone or download the repository
-git clone <repo-url>
+git clone https://github.com/rv-raghav/auth-template.git
 cd auth-template
 
 # 2. Install dependencies
@@ -221,23 +225,33 @@ Update Google Fonts import in each HTML file:
 
 ---
 
-## 🔗 Page URLs (Local)
+## 🔗 Page URLs
+
+### Live Demo (Vercel)
+
+| Page | URL |
+|------|-----|
+| Landing | https://chaicode-auth.vercel.app |
+| Sign In | https://chaicode-auth.vercel.app/templates/auth/signin |
+| Sign Up | https://chaicode-auth.vercel.app/templates/auth/signup |
+| Forgot Password | https://chaicode-auth.vercel.app/templates/auth/forgot-password |
+| Reset Password | https://chaicode-auth.vercel.app/templates/auth/reset-password |
+| OTP Verification | https://chaicode-auth.vercel.app/templates/verify/otp |
+| Magic Link Sent | https://chaicode-auth.vercel.app/templates/verify/magic-link-sent |
+| Magic Link Verified | https://chaicode-auth.vercel.app/templates/verify/magic-link-verified |
+| Account Security | https://chaicode-auth.vercel.app/templates/account/security |
+| Authenticator Setup | https://chaicode-auth.vercel.app/templates/account/authenticator-setup |
+| Sessions | https://chaicode-auth.vercel.app/templates/account/sessions |
+
+### Local Development
 
 When running `npm run serve`:
 
 | Page | URL |
 |------|-----|
 | Landing | http://localhost:3000 |
-| Sign In | http://localhost:3000/auth/signin.html |
-| Sign Up | http://localhost:3000/auth/signup.html |
-| Forgot Password | http://localhost:3000/auth/forgot-password.html |
-| Reset Password | http://localhost:3000/auth/reset-password.html |
-| OTP Verification | http://localhost:3000/verify/otp.html |
-| Magic Link Sent | http://localhost:3000/verify/magic-link-sent.html |
-| Magic Link Verified | http://localhost:3000/verify/magic-link-verified.html |
-| Account Security | http://localhost:3000/account/security.html |
-| Authenticator Setup | http://localhost:3000/account/authenticator-setup.html |
-| Sessions | http://localhost:3000/account/sessions.html |
+| Sign In | http://localhost:3000/templates/auth/signin.html |
+| Sign Up | http://localhost:3000/templates/auth/signup.html |
 
 ---
 
@@ -250,7 +264,7 @@ When running `npm run serve`:
 - [x] Dark mode
 - [x] Clean folder structure
 - [x] Documentation
-- [ ] Live demo URL (deploy to Vercel/Netlify)
+- [x] Live demo URL → [chaicode-auth.vercel.app](https://chaicode-auth.vercel.app)
 - [ ] Screenshots
 
 ---
