@@ -7,6 +7,9 @@
     <meta name="description" content="Create a new account">
     <title>Sign Up | Auth Template</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/logo/logo_lyst1760200411464.png">
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,33 +22,34 @@
 <body class="font-sans bg-slate-950 text-slate-50 min-h-screen">
 
     <!-- Main Container -->
-    <div class="flex min-h-screen">
+    <div class="auth-shell">
 
         <!-- Left Panel - Branding (Hidden on mobile) -->
-        <div class="hidden lg:flex lg:w-1/2 grid-pattern items-center justify-center relative">
-            <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+        <div class="auth-brand-panel grid-pattern">
+            <div class="auth-brand-panel-content">
                 <a href="../../index.html" class="block mb-6">
                     <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="200" height="60">
                 </a>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <p class="text-slate-400 text-sm leading-relaxed">
                     Join thousands of users who trust our platform for secure authentication.
                 </p>
             </div>
         </div>
 
         <!-- Right Panel - Sign Up Form -->
-        <div class="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-12 overflow-y-auto lg:border-l lg:border-slate-800">
+        <div class="auth-form-panel overflow-y-auto">
 
             <!-- Mobile Logo -->
-            <div class="flex justify-center mb-8 lg:hidden">
+            <div class="mobile-logo-row mb-8 lg:hidden">
                 <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="180" height="54">
             </div>
 
             <!-- Form Container -->
-            <div class="flex-1 flex flex-col justify-center w-full max-w-md mx-auto">
+            <div class="auth-form-content">
 
                 <!-- Header -->
                 <div class="mb-8">
+                    <p class="page-kicker mb-2">Get Started</p>
                     <h1 class="text-2xl sm:text-3xl font-bold text-white mb-2">Create an Account</h1>
                     <p class="text-slate-400 text-sm">Fill in your details to get started</p>
                 </div>
@@ -101,7 +105,7 @@
                                 <img src="../../assets/icons/eye.svg" alt="" class="w-5 h-5">
                             </button>
                         </div>
-                        <p class="mt-1.5 text-xs text-slate-500">
+                        <p class="form-hint">
                             Minimum 8 characters with uppercase, lowercase, and number
                         </p>
                     </div>
@@ -139,22 +143,24 @@
                         Create Account
                     </button>
 
-                    <!-- Divider -->
-                    <div class="divider">or sign up with</div>
+                    <div class="panel-card space-y-4">
+                        <!-- Divider -->
+                        <div class="divider">or sign up with</div>
 
-                    <!-- OAuth Buttons -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Google -->
-                        <button type="button" class="btn btn-oauth">
-                            <img src="../../assets/icons/google.svg" alt="Google" class="w-5 h-5">
-                            <span>Google</span>
-                        </button>
+                        <!-- OAuth Buttons -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Google -->
+                            <button type="button" class="btn btn-oauth">
+                                <img src="../../assets/icons/google.svg" alt="Google" class="w-5 h-5">
+                                <span>Google</span>
+                            </button>
 
-                        <!-- GitHub -->
-                        <button type="button" class="btn btn-oauth">
-                            <img src="../../assets/icons/github.svg" alt="GitHub" class="w-5 h-5">
-                            <span>GitHub</span>
-                        </button>
+                            <!-- GitHub -->
+                            <button type="button" class="btn btn-oauth">
+                                <img src="../../assets/icons/github.svg" alt="GitHub" class="w-5 h-5">
+                                <span>GitHub</span>
+                            </button>
+                        </div>
                     </div>
 
                 </form>

@@ -6,7 +6,9 @@
 
 📦 **Repository:** [github.com/rv-raghav/auth-template](https://github.com/rv-raghav/auth-template)
 
-![Template Preview](https://chaicode-auth.vercel.app/final-work/landing_page.jpg)
+![Landing Page Preview](https://chaicode-auth.vercel.app/final-work/landing_page.jpg)
+
+> The landing page now includes a **tabbed template browser** to quickly switch between Core Auth, Verification, and Account Security flows.
 
 ---
 
@@ -15,6 +17,7 @@
 Authentication is a core feature of every web application. This template provides:
 - **Pre-built UI screens** for all common auth flows
 - **Modern dark theme** with professional aesthetics
+- **Tabbed landing page** for faster template discovery
 - **Zero dependencies** - just HTML + Tailwind CSS
 - **Easy customization** - swap colors, logos, and text
 - **Mobile-first responsive design**
@@ -61,7 +64,7 @@ npm run dev
 
 ```
 auth-template/
-├── index.html                    # Landing page (page showcase)
+├── index.html                    # Landing page (hero + tabbed template browser)
 │
 ├── templates/                    # 📄 HTML Templates
 │   ├── auth/                     # 🔐 Core Authentication
@@ -119,6 +122,11 @@ auth-template/
 | Authenticator Setup | `/templates/account/authenticator-setup.html` | QR code, manual key, backup codes |
 | Session Management | `/templates/account/sessions.html` | Device list, sign out all sessions |
 
+### Landing Experience
+| Screen | Path | Features |
+|--------|------|----------|
+| Landing Page | `/index.html` | Hero section, quick actions, tabbed template navigation |
+
 ---
 
 ## 🛠️ Tech Stack
@@ -134,7 +142,7 @@ auth-template/
 - ❌ No JavaScript frameworks (React, Vue, etc.)
 - ❌ No backend services or APIs
 - ❌ No external UI libraries
-- ✅ Minimal JS only for password toggle & OTP auto-focus
+- ✅ Minimal JS only for password toggle, OTP auto-focus, and landing tabs
 
 ---
 
@@ -144,6 +152,7 @@ auth-template/
 - **Dark Mode First** - Optimized for reduced eye strain
 - **Split Layout** - Professional 50/50 split on desktop, stacks on mobile
 - **Brand Panel** - Left side features logo with animated grid background
+- **Tabbed Landing Browser** - Quickly switch across auth template categories
 - **8px Grid System** - Consistent spacing throughout
 
 ### Accessibility
@@ -168,18 +177,17 @@ auth-template/
 Edit CSS variables in `css/input.css`:
 ```css
 :root {
-    --brand-primary: #3b82f6;    /* Your brand color */
-    --brand-secondary: #2563eb;
-    --bg-primary: #0f172a;       /* Dark background */
-    --bg-secondary: #1e293b;
+    --brand-primary: rgb(251 146 60 / var(--tw-bg-opacity, 1));
+    --brand-secondary: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+    --bg-primary: #020202;
+    --bg-secondary: #0b0b0d;
 }
 ```
 Then rebuild: `npm run build:css`
 
 ### 2. Replace Logo
-Swap files in `assets/logo/`:
-- `logo-dark.svg` - Used on dark backgrounds
-- `logo.svg` - Used on light backgrounds
+Replace the logo file used across templates:
+- `assets/logo/logo_lyst1760200411464.png`
 
 ### 3. Change Font
 Update Google Fonts import in each HTML file:
@@ -260,6 +268,7 @@ When running `npm run serve`:
 - [x] All core authentication screens
 - [x] Verification flows (OTP + Magic Link)
 - [x] Optional security features
+- [x] Tabbed landing page navigation
 - [x] Responsive design
 - [x] Dark mode
 - [x] Clean folder structure

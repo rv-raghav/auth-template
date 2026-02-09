@@ -7,6 +7,9 @@
     <meta name="description" content="Check your email for magic link">
     <title>Magic Link Sent | Auth Template</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/logo/logo_lyst1760200411464.png">
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,41 +22,42 @@
 <body class="font-sans bg-slate-950 text-slate-50 min-h-screen">
 
     <!-- Main Container -->
-    <div class="flex min-h-screen">
+    <div class="auth-shell">
 
         <!-- Left Panel - Branding (Hidden on mobile) -->
-        <div class="hidden lg:flex lg:w-1/2 grid-pattern items-center justify-center relative">
-            <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+        <div class="auth-brand-panel grid-pattern">
+            <div class="auth-brand-panel-content">
                 <a href="../../index.html" class="block mb-6">
                     <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="200" height="60">
                 </a>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <p class="text-slate-400 text-sm leading-relaxed">
                     Secure, passwordless authentication. Just one click to sign in.
                 </p>
             </div>
         </div>
 
         <!-- Right Panel - Magic Link Sent -->
-        <div class="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-12 lg:border-l lg:border-slate-800">
+        <div class="auth-form-panel">
 
             <!-- Back Button -->
-            <div class="mb-8">
-                <a href="../auth/signin.html" class="btn btn-ghost inline-flex items-center gap-2 text-sm">
+            <div class="auth-top-row">
+                <a href="../auth/signin.html" class="btn btn-ghost auth-back-link">
                     <img src="../../assets/icons/chevron-left.svg" alt="" class="w-4 h-4">
                     Back to sign in
                 </a>
             </div>
 
             <!-- Mobile Logo -->
-            <div class="flex justify-center mb-8 lg:hidden">
+            <div class="mobile-logo-row mb-8 lg:hidden">
                 <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="180" height="54">
             </div>
 
             <!-- Content Container -->
-            <div class="flex-1 flex flex-col justify-center w-full max-w-md mx-auto text-center">
+            <div class="auth-form-content text-center">
 
                 <!-- Email Sent Illustration -->
                 <div class="mb-8">
+                    <p class="page-kicker mb-2">Passwordless Sign In</p>
                     <div
                         class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-orange-400/10 mb-6 animate-pulse">
                         <img src="../../assets/icons/mail-open.svg" alt="" class="w-12 h-12">
@@ -66,8 +70,12 @@
                     </p>
                 </div>
 
+                <div class="inline-flex items-center justify-center mx-auto mb-6 px-3 py-1 rounded-full border border-orange-400/25 bg-orange-400/10 text-xs text-orange-200">
+                    Link valid for 15 minutes
+                </div>
+
                 <!-- Instructions -->
-                <div class="bg-slate-900/65 border border-slate-800 rounded-lg p-6 mb-8">
+                <div class="panel-card mb-8">
                     <h3 class="font-medium text-white mb-4">What to do next:</h3>
                     <ol class="text-left text-sm text-slate-400 space-y-3">
                         <li class="flex items-start gap-3">
@@ -78,7 +86,7 @@
                         <li class="flex items-start gap-3">
                             <span
                                 class="shrink-0 w-6 h-6 rounded-full bg-orange-400/20 text-orange-300 text-xs flex items-center justify-center font-medium">2</span>
-                            <span>Look for an email from VDO.AI</span>
+                            <span>Look for an email from ChaiCode Registry</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span
@@ -98,12 +106,12 @@
                 </div>
 
                 <!-- Actions -->
-                <div class="space-y-4">
+                <div class="panel-card text-center space-y-4">
                     <p class="text-sm text-slate-400">
                         Didn't receive the email?
                     </p>
 
-                    <button type="button" class="btn btn-ghost w-full">
+                    <button type="button" class="btn btn-primary w-full">
                         Resend Magic Link
                     </button>
 

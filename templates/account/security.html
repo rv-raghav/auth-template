@@ -7,6 +7,9 @@
     <meta name="description" content="Account security settings">
     <title>Account Security | Auth Template</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/logo/logo_lyst1760200411464.png">
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,16 +22,16 @@
 <body class="font-sans bg-slate-950 text-slate-50 min-h-screen">
 
     <!-- Main Container -->
-    <div class="min-h-screen flex flex-col">
+    <div class="app-shell">
 
         <!-- Header -->
-        <header class="border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-sm sticky top-0 z-40">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
+        <header class="app-header">
+            <div class="app-header-inner app-header-inner--md">
                 <a href="../../index.html">
                     <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="120" height="36" class="w-24 sm:w-28 h-auto">
                 </a>
-                <nav class="flex items-center justify-end gap-2 sm:gap-3">
-                    <a href="../account/sessions.html" class="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors">
+                <nav class="app-nav">
+                    <a href="../account/sessions.html" class="app-nav-link">
                         Sessions
                     </a>
                     <a href="../auth/signin.html" class="btn btn-ghost header-btn text-xs sm:text-sm px-3 py-2">
@@ -39,10 +42,11 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-8">
+        <main class="page-wrap page-wrap--lg">
 
             <!-- Page Header -->
             <div class="mb-8">
+                <p class="page-kicker mb-2">Account Center</p>
                 <h1 class="text-2xl font-bold text-white mb-2">Account Security</h1>
                 <p class="text-slate-400 text-sm">Manage your password and security settings</p>
             </div>
@@ -55,7 +59,7 @@
             -->
 
             <!-- Password Section -->
-            <section class="bg-slate-900/65 border border-slate-800 rounded-lg p-6 mb-6">
+            <section class="panel-card mb-6">
                 <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div>
                         <h2 class="text-lg font-semibold text-white mb-1">Password</h2>
@@ -90,7 +94,7 @@
                         </div>
                     </div>
 
-                    <p class="text-xs text-slate-500">
+                    <p class="form-hint">
                         Password must be at least 8 characters with uppercase, lowercase, and a number.
                     </p>
 
@@ -103,8 +107,8 @@
             </section>
 
             <!-- Two-Factor Authentication Section -->
-            <section class="bg-slate-900/65 border border-slate-800 rounded-lg p-6 mb-6">
-                <div class="flex items-start justify-between">
+            <section class="panel-card mb-6">
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div class="flex-1">
                         <h2 class="text-lg font-semibold text-white mb-1">Two-Factor Authentication</h2>
                         <p class="text-sm text-slate-400 mb-4">Add an extra layer of security to your account</p>
@@ -145,13 +149,13 @@
             </section>
 
             <!-- Recovery Options Section -->
-            <section class="bg-slate-900/65 border border-slate-800 rounded-lg p-6 mb-6">
+            <section class="panel-card mb-6">
                 <h2 class="text-lg font-semibold text-white mb-1">Recovery Options</h2>
                 <p class="text-sm text-slate-400 mb-6">Add backup methods to recover your account</p>
 
                 <div class="space-y-4">
                     <!-- Recovery Email -->
-                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between p-4 bg-slate-900 rounded-lg border border-slate-800">
+                    <div class="panel-card-soft flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-orange-400/10 flex items-center justify-center">
                                 <img src="../../assets/icons/mail.svg" alt="" class="w-5 h-5">
@@ -165,7 +169,7 @@
                     </div>
 
                     <!-- Recovery Phone -->
-                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between p-4 bg-slate-900 rounded-lg border border-slate-800">
+                    <div class="panel-card-soft flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-orange-400/10 flex items-center justify-center">
                                 <img src="../../assets/icons/phone-green.svg" alt="" class="w-5 h-5">
@@ -181,7 +185,7 @@
             </section>
 
             <!-- Recent Security Activity -->
-            <section class="bg-slate-900/65 border border-slate-800 rounded-lg p-6">
+            <section class="panel-card">
                 <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-6">
                     <div>
                         <h2 class="text-lg font-semibold text-white mb-1">Recent Security Activity</h2>
@@ -190,7 +194,25 @@
                     <a href="../account/sessions.html" class="link text-sm">View all sessions</a>
                 </div>
 
-                <div class="overflow-x-auto">
+                <div class="md:hidden space-y-3">
+                    <article class="panel-card-soft">
+                        <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">Sign in</p>
+                        <p class="text-sm text-white">Mumbai, India</p>
+                        <p class="text-xs text-slate-500 mt-1">Today, 2:00 AM</p>
+                    </article>
+                    <article class="panel-card-soft">
+                        <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">Password changed</p>
+                        <p class="text-sm text-white">Mumbai, India</p>
+                        <p class="text-xs text-slate-500 mt-1">Jan 9, 2026</p>
+                    </article>
+                    <article class="panel-card-soft">
+                        <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">Sign in</p>
+                        <p class="text-sm text-white">Delhi, India</p>
+                        <p class="text-xs text-slate-500 mt-1">Jan 8, 2026</p>
+                    </article>
+                </div>
+
+                <div class="hidden md:block overflow-x-auto">
                     <table class="w-full text-sm">
                         <thead>
                             <tr class="border-b border-slate-800">
@@ -199,7 +221,7 @@
                                 <th class="text-left py-3 px-4 font-medium text-slate-400">Date</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-700">
+                        <tbody class="divide-y divide-slate-800">
                             <tr>
                                 <td class="py-3 px-4 text-white">Sign in</td>
                                 <td class="py-3 px-4 text-slate-400">Mumbai, India</td>
@@ -223,9 +245,9 @@
         </main>
 
         <!-- Footer -->
-        <footer class="border-t border-slate-800/80 py-6">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-slate-500">
-                © 2026 VDO.AI. All rights reserved.
+        <footer class="app-footer app-footer--sm">
+            <div class="app-footer-inner app-footer-inner--md text-center text-sm text-slate-500">
+                © 2026 ChaiCode Registry. All rights reserved.
             </div>
         </footer>
 

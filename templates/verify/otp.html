@@ -7,6 +7,9 @@
     <meta name="description" content="Verify your identity with OTP">
     <title>OTP Verification | Auth Template</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/logo/logo_lyst1760200411464.png">
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,41 +22,42 @@
 <body class="font-sans bg-slate-950 text-slate-50 min-h-screen">
 
     <!-- Main Container -->
-    <div class="flex min-h-screen">
+    <div class="auth-shell">
 
         <!-- Left Panel - Branding (Hidden on mobile) -->
-        <div class="hidden lg:flex lg:w-1/2 grid-pattern items-center justify-center relative">
-            <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+        <div class="auth-brand-panel grid-pattern">
+            <div class="auth-brand-panel-content">
                 <a href="../../index.html" class="block mb-6">
                     <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="200" height="60">
                 </a>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <p class="text-slate-400 text-sm leading-relaxed">
                     Enter the verification code we sent to confirm your identity.
                 </p>
             </div>
         </div>
 
         <!-- Right Panel - OTP Form -->
-        <div class="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-12 lg:border-l lg:border-slate-800">
+        <div class="auth-form-panel">
 
             <!-- Back Button -->
-            <div class="mb-8">
-                <a href="../auth/signin.html" class="btn btn-ghost inline-flex items-center gap-2 text-sm">
+            <div class="auth-top-row">
+                <a href="../auth/signin.html" class="btn btn-ghost auth-back-link">
                     <img src="../../assets/icons/chevron-left.svg" alt="" class="w-4 h-4">
                     Back to sign in
                 </a>
             </div>
 
             <!-- Mobile Logo -->
-            <div class="flex justify-center mb-8 lg:hidden">
+            <div class="mobile-logo-row mb-8 lg:hidden">
                 <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="180" height="54">
             </div>
 
             <!-- Form Container -->
-            <div class="flex-1 flex flex-col justify-center w-full max-w-md mx-auto">
+            <div class="auth-form-content">
 
                 <!-- Header -->
                 <div class="mb-8 text-center">
+                    <p class="page-kicker mb-2">Verification</p>
                     <!-- Email Icon -->
                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-400/10 mb-6">
                         <img src="../../assets/icons/mail.svg" alt="" class="w-8 h-8">
@@ -75,20 +79,26 @@
                 <!-- OTP Form -->
                 <form action="#" method="POST" class="space-y-8">
 
-                    <!-- OTP Input Boxes -->
-                    <div class="flex justify-center gap-2 sm:gap-3 px-1">
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
-                        <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
-                            pattern="[0-9]*" required>
+                    <div class="panel-card text-center space-y-4">
+                        <p class="text-xs uppercase tracking-wider text-slate-500">6-digit code</p>
+
+                        <!-- OTP Input Boxes -->
+                        <div class="flex justify-center gap-2 sm:gap-3 px-1">
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                autocomplete="one-time-code" aria-label="OTP digit 1" pattern="[0-9]*" required>
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                aria-label="OTP digit 2" pattern="[0-9]*" required>
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                aria-label="OTP digit 3" pattern="[0-9]*" required>
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                aria-label="OTP digit 4" pattern="[0-9]*" required>
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                aria-label="OTP digit 5" pattern="[0-9]*" required>
+                            <input type="text" maxlength="1" class="otp-input focus-ring" inputmode="numeric"
+                                aria-label="OTP digit 6" pattern="[0-9]*" required>
+                        </div>
+
+                        <p class="text-xs text-slate-500">Code expires in 10 minutes.</p>
                     </div>
 
                     <!-- Verify Button -->
@@ -97,7 +107,7 @@
                     </button>
 
                     <!-- Resend Code -->
-                    <div class="text-center space-y-3">
+                    <div class="panel-card text-center space-y-3">
                         <p class="text-sm text-slate-400">
                             Didn't receive the code?
                         </p>
