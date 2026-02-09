@@ -239,7 +239,9 @@
             const tabs = Array.from(document.querySelectorAll('[data-tab]'));
             const panels = Array.from(document.querySelectorAll('[data-panel]'));
 
-            const activate = (target) => {
+            const activate = (target, options = {}) => {
+                const { updateUrl = true } = options;
+
                 tabs.forEach((tab) => {
                     const active = tab.dataset.tab === target;
                     tab.setAttribute('aria-selected', String(active));
@@ -257,7 +259,12 @@
                     }
                 });
 
-                history.replaceState(null, '', `#${target}`);
+                if (updateUrl) {
+                    const nextUrl = target === 'auth'
+                        ? `${location.pathname}${location.search}`
+                        : `#${target}`;
+                    history.replaceState(null, '', nextUrl);
+                }
             };
 
             const moveFocus = (currentIndex, direction) => {
@@ -290,7 +297,7 @@
                 ? location.hash.slice(1)
                 : 'auth';
 
-            activate(defaultTab);
+            activate(defaultTab, { updateUrl: location.hash.length > 0 });
         })();
     </script>
 

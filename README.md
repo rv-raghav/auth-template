@@ -6,7 +6,7 @@
 
 📦 **Repository:** [github.com/rv-raghav/auth-template](https://github.com/rv-raghav/auth-template)
 
-![Landing Page Preview](https://chaicode-auth.vercel.app/final-work/landing_page.jpg)
+![Landing Page Preview](https://chaicode-auth.vercel.app/final-work/landing-page.jpg)
 
 > The landing page now includes a **tabbed template browser** to quickly switch between Core Auth, Verification, and Account Security flows.
 
