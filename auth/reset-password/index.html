@@ -8,7 +8,7 @@
     <title>Reset Password | Auth Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../../assets/logo/logo_lyst1760200411464.png">
+    <link rel="icon" type="image/png" href="/assets/logo/logo_lyst1760200411464.png">
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS (compiled) -->
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body class="font-sans bg-slate-950 text-slate-50 min-h-screen">
@@ -27,8 +27,8 @@
         <!-- Left Panel - Branding (Hidden on mobile) -->
         <div class="auth-brand-panel grid-pattern">
             <div class="auth-brand-panel-content">
-                <a href="../../index.html" class="block mb-6">
-                    <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="200" height="60">
+                <a href="/" class="block mb-6">
+                    <img src="/assets/logo/logo_lyst1760200411464.png" alt="Logo" width="200" height="60">
                 </a>
                 <p class="text-slate-400 text-sm leading-relaxed">
                     Create a strong password to keep your account secure.
@@ -41,15 +41,15 @@
 
             <!-- Back Button -->
             <div class="auth-top-row">
-                <a href="../auth/signin.html" class="btn btn-ghost auth-back-link">
-                    <img src="../../assets/icons/chevron-left.svg" alt="" class="w-4 h-4">
+                <a href="/login" class="btn btn-ghost auth-back-link">
+                    <img src="/assets/icons/chevron-left.svg" alt="" class="w-4 h-4">
                     Back to sign in
                 </a>
             </div>
 
             <!-- Mobile Logo -->
             <div class="mobile-logo-row mb-8 lg:hidden">
-                <img src="../../assets/logo/logo_lyst1760200411464.png" alt="Logo" width="180" height="54">
+                <img src="/assets/logo/logo_lyst1760200411464.png" alt="Logo" width="180" height="54">
             </div>
 
             <!-- Form Container -->
@@ -78,11 +78,11 @@
                 <div class="space-y-4">
                     <div class="alert alert-success animate-fade-in">
                         <div class="flex items-center gap-3">
-                            <img src="../../assets/icons/check.svg" alt="" class="w-5 h-5">
+                            <img src="/assets/icons/check.svg" alt="" class="w-5 h-5">
                             <span>Your password has been reset. Redirecting you to sign in...</span>
                         </div>
                     </div>
-                    <a href="../auth/signin.html" class="btn btn-primary w-full">
+                    <a href="/login" class="btn btn-primary w-full">
                         Go to Sign In
                     </a>
                 </div>
@@ -101,7 +101,7 @@
                                 placeholder="Enter new password" required autocomplete="new-password" minlength="8">
                             <button type="button" class="password-toggle" aria-label="Toggle password visibility"
                                 onclick="togglePassword('password')">
-                                <img src="../../assets/icons/eye.svg" alt="" class="w-5 h-5">
+                                <img src="/assets/icons/eye.svg" alt="" class="w-5 h-5">
                             </button>
                         </div>
                         <p class="form-hint">
@@ -120,7 +120,7 @@
                                 autocomplete="new-password">
                             <button type="button" class="password-toggle" aria-label="Toggle password visibility"
                                 onclick="togglePassword('confirm-password')">
-                                <img src="../../assets/icons/eye.svg" alt="" class="w-5 h-5">
+                                <img src="/assets/icons/eye.svg" alt="" class="w-5 h-5">
                             </button>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                     <!-- Back to Sign In -->
                     <p class="text-center text-sm text-slate-400">
                         Changed your mind?
-                        <a href="../auth/signin.html" class="link font-medium">Back to sign in</a>
+                        <a href="/login" class="link font-medium">Back to sign in</a>
                     </p>
 
                 </form>
