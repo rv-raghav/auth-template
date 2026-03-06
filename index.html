@@ -33,10 +33,10 @@
                 </a>
 
                 <div class="app-nav">
-                    <a href="templates/auth/signin.html" class="btn btn-ghost header-btn text-xs sm:text-sm px-3 py-2">
+                    <a href="/login" class="btn btn-ghost header-btn text-xs sm:text-sm px-3 py-2">
                         Sign In
                     </a>
-                    <a href="templates/auth/signup.html"
+                    <a href="/signup"
                         class="btn btn-primary header-btn text-xs sm:text-sm px-3 py-2">
                         Get Started
                     </a>
@@ -75,7 +75,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                            <a href="templates/auth/signin.html" class="btn btn-primary px-6 py-3 text-sm sm:text-base">
+                            <a href="/login" class="btn btn-primary px-6 py-3 text-sm sm:text-base">
                                 Open First Screen
                             </a>
                             <a href="https://github.com/rv-raghav/auth-template" target="_blank"
@@ -113,7 +113,7 @@
                             <p class="text-sm text-slate-400 mt-2">Use tabs to switch sections and open the exact screen
                                 you need.</p>
                         </div>
-                        <a href="templates/account/security.html" class="link text-sm">View full security set</a>
+                        <a href="/account/security" class="link text-sm">View full security set</a>
                     </div>
 
                     <div role="tablist" aria-label="Auth template categories"
@@ -142,28 +142,28 @@
                     <div class="mt-7">
                         <div id="panel-auth" role="tabpanel" aria-labelledby="tab-auth" data-panel="auth"
                             class="template-panel grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
-                            <a href="templates/auth/signin.html" class="template-card">
+                            <a href="/login" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/login.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Sign In</h3>
                                 <p class="text-xs text-slate-400 mt-1">Email/password entry with OAuth actions.</p>
                             </a>
 
-                            <a href="templates/auth/signup.html" class="template-card">
+                            <a href="/signup" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/user-plus.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Sign Up</h3>
                                 <p class="text-xs text-slate-400 mt-1">Registration flow with profile + credentials.</p>
                             </a>
 
-                            <a href="templates/auth/forgot-password.html" class="template-card">
+                            <a href="/auth/forgot-password" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/key.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Forgot Password</h3>
                                 <p class="text-xs text-slate-400 mt-1">Password reset request state.</p>
                             </a>
 
-                            <a href="templates/auth/reset-password.html" class="template-card">
+                            <a href="/auth/reset-password" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/refresh.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Reset Password</h3>
@@ -173,21 +173,21 @@
 
                         <div id="panel-verify" role="tabpanel" aria-labelledby="tab-verify" data-panel="verify"
                             class="template-panel hidden grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-                            <a href="templates/verify/otp.html" class="template-card">
+                            <a href="/auth/verify" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/smartphone.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">OTP Verification</h3>
                                 <p class="text-xs text-slate-400 mt-1">6-digit code with auto-focus behavior.</p>
                             </a>
 
-                            <a href="templates/verify/magic-link-sent.html" class="template-card">
+                            <a href="/auth/magic-link" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/mail-open.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Magic Link Sent</h3>
                                 <p class="text-xs text-slate-400 mt-1">Email sent state with clear next steps.</p>
                             </a>
 
-                            <a href="templates/verify/magic-link-verified.html" class="template-card">
+                            <a href="/auth/magic-link/verified" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/check-circle.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Magic Link Verified</h3>
@@ -197,21 +197,21 @@
 
                         <div id="panel-account" role="tabpanel" aria-labelledby="tab-account" data-panel="account"
                             class="template-panel hidden grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-                            <a href="templates/account/security.html" class="template-card">
+                            <a href="/account/security" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/shield-red.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Security Settings</h3>
                                 <p class="text-xs text-slate-400 mt-1">Password, recovery options, and 2FA entry.</p>
                             </a>
 
-                            <a href="templates/account/authenticator-setup.html" class="template-card">
+                            <a href="/account/authenticator-setup" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/lock.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Authenticator Setup</h3>
                                 <p class="text-xs text-slate-400 mt-1">QR setup, code verify, backup codes.</p>
                             </a>
 
-                            <a href="templates/account/sessions.html" class="template-card">
+                            <a href="/account/sessions" class="template-card">
                                 <div class="template-icon"><img src="assets/icons/landing/desktop-orange.svg" alt=""
                                         class="w-5 h-5"></div>
                                 <h3 class="text-sm font-semibold text-white mt-3">Session Management</h3>
