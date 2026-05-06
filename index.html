@@ -32,12 +32,12 @@
                     <span class="hidden md:inline text-xs tracking-[0.2em] uppercase text-slate-500">Auth UI Kit</span>
                 </a>
 
-                <div class="app-nav">
-                    <a href="/login" class="btn btn-ghost header-btn text-xs sm:text-sm px-3 py-2">
+                <div class="app-nav" id="nav-actions">
+                    <a href="/login" class="btn btn-ghost header-btn text-xs sm:text-sm px-3 py-2" id="nav-signin">
                         Sign In
                     </a>
                     <a href="/signup"
-                        class="btn btn-primary header-btn text-xs sm:text-sm px-3 py-2">
+                        class="btn btn-primary header-btn text-xs sm:text-sm px-3 py-2" id="nav-signup">
                         Get Started
                     </a>
                 </div>
@@ -300,6 +300,7 @@
             activate(defaultTab, { updateUrl: location.hash.length > 0 });
         })();
     </script>
+    <script src="/js/auth.js"></script>
 
 </body>
 
